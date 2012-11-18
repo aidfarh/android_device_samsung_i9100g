@@ -7,12 +7,12 @@ on init
     export ANDROID_ROOT /system
     export ANDROID_DATA /data
     export ANDROID_CACHE /cache
-    export SECONDARY_STORAGE /emmc
-    export EXTERNAL_STORAGE /sdcard
+    export SECONDARY_STORAGE /sdcard
+    export EXTERNAL_STORAGE /extSdCard
 
     symlink /system/etc /etc
 
-    mkdir /emmc
+    mkdir /extSdCard
     mkdir /sdcard
     mkdir /usbdisk
     mkdir /system
