@@ -1,0 +1,13 @@
+[
+    {
+        "repository": "MoKee/android_kernel_samsung_t1",
+        "target_path": "kernel/samsung/t1",
+        "branch": "jb-mr1_mkt"
+    },
+    {
+        "repository": "android_packages_apps_SamsungServiceMode",
+        "target_path": "packages/apps/SamsungServiceMode",
+        "branch": "cm-10.1",
+        "remote": "cyanogen"
+    }
+]
