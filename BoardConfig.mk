@@ -137,3 +137,8 @@ TW_DEFAULT_EXTERNAL_STORAGE := true
 TW_FLASH_FROM_STORAGE := true
 # TW_INCLUDE_INJECTTWRP := true
 BOARD_SUPPRESS_EMMC_WIPE := true
+
+# Odex if official release
+ifdef MK_RELEASE
+WITH_DEXPREOPT := true
+endif
