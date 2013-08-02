@@ -2,18 +2,22 @@
     {
         "repository": "MoKee/android_device_samsung_omap4-common",
         "target_path": "device/samsung/omap4-common"
+        "remote": "mokee"
     },
     {
         "repository": "MoKee/android_vendor_samsung_omap4-common",
         "target_path": "vendor/samsung/omap4-common"
+        "remote": "mokee"
     },
     {
         "repository": "MoKee/android_kernel_samsung_t1",
         "target_path": "kernel/samsung/t1"
+        "remote": "mokee"
     },
     {
         "repository": "MoKee/android_vendor_samsung_i9100g",
         "target_path": "vendor/samsung/i9100g"
+        "remote": "mokee"
     },
     {
         "repository": "android_packages_apps_SamsungServiceMode",
