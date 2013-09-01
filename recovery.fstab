@@ -8,5 +8,5 @@
 /system		ext4		/dev/block/mmcblk0p9
 /data		ext4		/dev/block/mmcblk0p10
 
-/emmc		auto		/dev/block/mmcblk0p11
-/sdcard		auto		/dev/block/mmcblk1p1	/dev/block/mmcblk1
+/sdcard		auto		/dev/block/mmcblk0p11
+/extSdCard		auto		/dev/block/mmcblk1p1	/dev/block/mmcblk1
