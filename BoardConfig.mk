@@ -41,6 +41,7 @@ TARGET_KERNEL_CONFIG := cyanogenmod_i9100g_defconfig
 # Init
 TARGET_PROVIDES_INIT := true
 TARGET_PROVIDES_INIT_TARGET_RC := true
+TARGET_RECOVERY_INITRC := device/samsung/i9100g/rootdir/recovery.rc
 
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -116,8 +117,8 @@ BOARD_UMS_LUNFILE := "/sys/class/android_usb/f_mass_storage/lun0/file"
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
-TARGET_RECOVERY_FSTAB := device/samsung/i9100g/rootdir/fstab.t1
-RECOVERY_FSTAB_VERSION := 2
+TARGET_RECOVERY_FSTAB := device/samsung/i9100g/recovery.fstab
+RECOVERY_FSTAB_VERSION := 1
 
 # assert
 TARGET_OTA_ASSERT_DEVICE := i9100g,GT-I9100G
