@@ -41,7 +41,6 @@ TARGET_KERNEL_CONFIG := cyanogenmod_i9100g_defconfig
 # Init
 TARGET_PROVIDES_INIT := true
 TARGET_PROVIDES_INIT_TARGET_RC := true
-TARGET_RECOVERY_INITRC := device/samsung/i9100g/rootdir/recovery.rc
 
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -49,6 +48,9 @@ BOARD_BOOTIMAGE_PARTITION_SIZE := 8388608
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1073741824
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 2147483648
 BOARD_FLASH_BLOCK_SIZE := 4096
+
+# Hardware tunables
+BOARD_HARDWARE_CLASS := hardware/samsung/cmhw
 
 # Egl
 BOARD_EGL_CFG := device/samsung/i9100g/configs/egl.cfg
@@ -94,6 +96,19 @@ BOARD_BLUEDROID_VENDOR_CONF := device/samsung/i9100g/bluetooth/vnd_i9100g.txt
 # Security
 BOARD_USES_SECURE_SERVICES := true
 
+# Selinux
+BOARD_SEPOLICY_DIRS := \
+    device/samsung/i9100g/selinux
+
+BOARD_SEPOLICY_UNION := \
+    file_contexts \
+    file.te \
+    device.te \
+    domain.te \
+    pvrsrvinit.te \
+    rild.te \
+    wpa_supplicant.te
+
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/i9100g/recovery/recovery_keys.c
@@ -101,6 +116,8 @@ BOARD_UMS_LUNFILE := "/sys/class/android_usb/f_mass_storage/lun0/file"
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
+TARGET_RECOVERY_FSTAB := device/samsung/i9100g/rootdir/fstab.t1
+RECOVERY_FSTAB_VERSION := 2
 
 # assert
 TARGET_OTA_ASSERT_DEVICE := i9100g,GT-I9100G
