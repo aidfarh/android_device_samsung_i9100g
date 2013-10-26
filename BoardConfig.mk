@@ -133,7 +133,3 @@ TARGET_RELEASETOOL_IMG_FROM_TARGET_SCRIPT := ./device/samsung/i9100g/releasetool
 # Use the non-open-source parts, if they're present
 -include vendor/samsung/i9100g/BoardConfigVendor.mk
 
-# Odex if official release
-ifdef MK_RELEASE
-WITH_DEXPREOPT := true
-endif
