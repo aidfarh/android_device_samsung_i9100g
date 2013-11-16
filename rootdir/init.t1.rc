@@ -47,6 +47,10 @@ on fs
 # pvr module
     insmod /system/lib/modules/pvrsrvkm_sgx540_120.ko
 
+# exfat module
+    insmod /system/lib/modules/exfat_core.ko
+    insmod /system/lib/modules/exfat_fs.ko
+
 # change permissions for wifi
     chmod 0770 /data/misc/wifi 
 

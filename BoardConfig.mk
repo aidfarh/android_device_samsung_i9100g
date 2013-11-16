@@ -98,10 +98,10 @@ BOARD_BLUEDROID_VENDOR_CONF := device/samsung/i9100g/bluetooth/vnd_i9100g.txt
 BOARD_USES_SECURE_SERVICES := true
 
 # Selinux
-BOARD_SEPOLICY_DIRS := \
+BOARD_SEPOLICY_DIRS += \
     device/samsung/i9100g/selinux
 
-BOARD_SEPOLICY_UNION := \
+BOARD_SEPOLICY_UNION += \
     file_contexts \
     file.te \
     device.te \
@@ -149,4 +149,3 @@ TW_DEFAULT_EXTERNAL_STORAGE := true
 TW_FLASH_FROM_STORAGE := true
 BOARD_SUPPRESS_EMMC_WIPE := true
 HAVE_SELINUX := true
-
