@@ -17,3 +17,6 @@
 # recovery
 /dev/block/mmcblk0p5		/boot				emmc		defaults		recoveryonly
 /dev/block/mmcblk0p6		/recovery			emmc		defaults		recoveryonly
+
+#ZRam
+/dev/block/zram0 none swap defaults zramsize=125829120

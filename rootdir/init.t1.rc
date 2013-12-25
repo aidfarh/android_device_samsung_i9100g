@@ -26,6 +26,7 @@ on init
 
 on fs
     mount_all /fstab.t1
+    swapon_all /fstab.t1
 
 # We chown/chmod /efs because mount is run as root + defaults
     chown radio system /efs
@@ -353,6 +354,10 @@ on boot
 # ril control auto-suspend
     chmod 0660 /sys/bus/usb/devices/usb1/power/control
     chown radio radio /sys/bus/usb/devices/usb1/power/control
+
+# add zram parameters
+    write /proc/sys/vm/page-cluster 0
+    write /proc/sys/vm/swappiness 70
 
 on property:persist.sys.t1.off_mode=*
     write /d/pm_debug/enable_off_mode $persist.sys.t1.off_mode
