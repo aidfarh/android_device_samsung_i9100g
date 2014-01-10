@@ -26,7 +26,6 @@ on init
 
 on fs
     mount_all /fstab.t1
-    swapon_all /fstab.t1
 
 # We chown/chmod /efs because mount is run as root + defaults
     chown radio system /efs
@@ -83,6 +82,11 @@ on fs
 
     setprop ro.build.product GT-I9100G
     setprop ro.product.device GT-I9100G
+    
+# zram
+    insmod /system/lib/modules/lzo_compress.ko
+    insmod /system/lib/modules/lzo_decompress.ko
+    insmod /system/lib/modules/zram.ko
 
 on post-fs-data
     mkdir /data/misc/wifi 0770 wifi wifi
